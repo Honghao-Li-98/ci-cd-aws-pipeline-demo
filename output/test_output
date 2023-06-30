@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="1" failures="1" errors="0" time="2.157">
+  <testsuite name="undefined" errors="0" failures="1" skipped="0" timestamp="2023-06-30T18:35:31" time="2.128" tests="1">
+    <testcase classname=" foo" name=" foo" time="0.01">
+      <failure>Error: expect(received).toEqual(expected) // deep equality
+
+Expected: 300
+Received: 200
+    at Object.&lt;anonymous&gt; (/Users/honghaoli/work/ci-cd-aws-pipeline-demo/test/ci-cd-aws-pipeline-demo.test.ts:10:31)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)</failure>
+    </testcase>
+  </testsuite>
+</testsuites>
