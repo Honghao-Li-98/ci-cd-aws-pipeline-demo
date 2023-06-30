@@ -9,6 +9,7 @@ import {
 import { ManualApprovalStep } from "aws-cdk-lib/pipelines";
 import { MyPipelineAppStage } from "./stage";
 import { PolicyStatement } from "aws-cdk-lib/aws-iam";
+import { BuildSpec } from "aws-cdk-lib/aws-codebuild";
 
 export class CiCdAwsPipelineDemoStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
@@ -21,7 +22,7 @@ export class CiCdAwsPipelineDemoStack extends cdk.Stack {
           "Honghao-Li-98/ci-cd-aws-pipeline-demo",
           "main"
         ), //Remember to change
-        commands: ["npm ci", "npm run build", "npx cdk synth"],
+        commands: ["npm ci", "npm run build", "npm cdk synth"],
       }),
     });
 
