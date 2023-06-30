@@ -13,7 +13,7 @@ export class MyLambdaStack extends cdk.Stack {
   ) {
     super(scope, id, props);
     new NodejsFunction(this, "LambdaFunction", {
-      runtime: Runtime.NODEJS_14_X, //using node for this, but can easily use python or other
+      runtime: Runtime.NODEJS_16_X, //using node for this, but can easily use python or other
       handler: "handler",
       entry: path.join(__dirname, "./lambda/handler.ts"),
       environment: { stageName: stageName }, //inputting stagename
